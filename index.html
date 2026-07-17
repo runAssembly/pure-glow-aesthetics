@@ -4,315 +4,252 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pure Glow Medical Aesthetics · Abbotsford, BC</title>
-<meta name="description" content="Physician-led medical aesthetics in Abbotsford, BC. Honest assessments, advanced medical lasers, and results that always look like you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#faf6ef;
-  --cream2:#f3ece0;
-  --white:#fffdf9;
-  --gold:#c39a54;
-  --gold-deep:#b8933f;
-  --ink:#2c2621;
-  --ink-soft:#5a5148;
-  --line:rgba(195,154,84,.32);
+  --cream:#faf6ef;--cream2:#f3ece0;--ivory:#fffdf8;
+  --gold:#c39a54;--gold2:#b8933f;--ink:#2c2621;--muted:#6b6157;
+  --line:rgba(195,154,84,.35);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Jost',sans-serif;font-weight:300;
-  background:var(--cream);color:var(--ink);line-height:1.7;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1;}
-a{color:inherit;text-decoration:none}
+body{font-family:'Jost',sans-serif;font-weight:300;color:var(--ink);background:var(--cream);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
 img{max-width:100%;display:block}
-.eyebrow{
-  font-family:'Jost',sans-serif;font-weight:400;font-size:.72rem;
-  letter-spacing:.32em;text-transform:uppercase;color:var(--gold-deep);
-}
-.container{width:min(1180px,92vw);margin:0 auto}
-.hair{height:1px;width:100%;background:var(--line)}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-family:'Jost';font-weight:400;text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--gold2)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 
-/* ===== NAV ===== */
-header{
-  position:fixed;top:0;left:0;right:0;z-index:50;
-  background:rgba(250,246,239,.82);backdrop-filter:blur(12px);
-  border-bottom:1px solid transparent;transition:.4s;
-}
-header.scrolled{border-bottom:1px solid var(--line);box-shadow:0 8px 40px rgba(44,38,33,.05)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-.logo img{height:52px;width:auto;transition:.4s}
-header.scrolled .logo img{height:44px}
-.nav-links{display:flex;align-items:center;gap:2.4rem;list-style:none}
-.nav-links a{
-  font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;font-weight:300;
-  position:relative;padding:.2rem 0;
-}
-.nav-links a:not(.ig)::after{
-  content:'';position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--gold);transition:.4s;
-}
-.nav-links a:hover::after{width:100%}
-.btn{
-  display:inline-block;font-family:'Jost',sans-serif;font-weight:400;cursor:pointer;
-  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
-  padding:.85rem 1.8rem;border:1px solid var(--gold);background:transparent;color:var(--ink);
-  transition:.4s;border-radius:1px;
-}
-.btn:hover{background:var(--gold);color:var(--white)}
-.btn-solid{background:var(--ink);border-color:var(--ink);color:var(--cream)}
-.btn-solid:hover{background:var(--gold);border-color:var(--gold);color:var(--white)}
+/* NAV */
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:22px 34px;transition:background .4s ease,padding .4s ease,box-shadow .4s ease}
+nav.scrolled{background:rgba(250,246,239,.85);backdrop-filter:blur(12px);padding:12px 34px;box-shadow:0 1px 0 var(--line)}
+.logo img{height:46px;width:auto;transition:height .4s ease}
+nav.scrolled .logo img{height:38px}
+.logo-text{font-family:'Cormorant Garamond';font-size:1.5rem;letter-spacing:.04em;color:var(--ink)}
+.navlinks{display:flex;align-items:center;gap:34px}
+.navlinks a.link{position:relative;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:400}
+.navlinks a.link::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--gold2);transition:width .35s ease}
+.navlinks a.link:hover::after{width:100%}
+.btn{display:inline-block;font-family:'Jost';font-weight:400;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;
+  padding:13px 26px;border:1px solid var(--gold2);color:var(--ink);background:transparent;cursor:pointer;position:relative;overflow:hidden;transition:color .4s ease,transform .3s ease}
+.btn::before{content:"";position:absolute;inset:0;background:var(--gold2);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;z-index:-1}
+.btn:hover{color:#fff;transform:translateY(-2px)}
+.btn:hover::before{transform:scaleX(1)}
+.btn.solid{background:var(--gold2);color:#fff;border-color:var(--gold2)}
+.btn.solid::before{background:var(--ink)}
+.btn.solid:hover{color:#fff}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.hamburger span{width:26px;height:1.5px;background:var(--ink);transition:.35s}
+.hamburger span{width:26px;height:2px;background:var(--ink);transition:.3s}
 
-/* ===== HERO ===== */
-.hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:100vh;padding-top:80px}
-.hero-img{
-  background:url('img/pure-glow-aesthetics-hero.jpg') center/cover no-repeat,var(--cream2);
-  position:relative;
-}
-.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(250,246,239,.35))}
-.hero-text{
-  display:flex;flex-direction:column;justify-content:center;
-  padding:clamp(2rem,6vw,6rem);background:var(--cream);
-}
-.hero-text .eyebrow{margin-bottom:1.6rem}
-.hero-text h1{font-size:clamp(3rem,6vw,5.4rem);font-weight:500;letter-spacing:-.01em;margin-bottom:1.4rem}
-.hero-text h1 em{font-style:italic;color:var(--gold-deep)}
-.hero-text p.sub{font-size:1.08rem;color:var(--ink-soft);max-width:34ch;margin-bottom:1.6rem}
-.pricing-line{
-  font-size:.85rem;letter-spacing:.12em;color:var(--ink);
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  padding:.9rem 0;margin-bottom:2rem;display:inline-block;
-}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
-.hero-phone{font-size:.85rem;letter-spacing:.14em;color:var(--ink-soft)}
-.hero-phone a{color:var(--gold-deep)}
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;position:relative}
+.hero-img{background:url('img/pure-glow-aesthetics-hero.jpg') center/cover no-repeat;position:relative}
+.hero-text{background:var(--cream);display:flex;flex-direction:column;justify-content:flex-start;padding:150px 60px 60px}
+.hero-text .eyebrow{margin-bottom:22px}
+.hero-text h1{font-size:clamp(2.6rem,5.2vw,4.6rem);margin-bottom:22px;letter-spacing:.01em}
+.hero-text p.sub{font-size:1.06rem;color:var(--muted);max-width:460px;margin-bottom:20px}
+.hero-line{font-size:.9rem;letter-spacing:.06em;color:var(--gold2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:30px;max-width:460px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.hero-phone{font-size:.85rem;letter-spacing:.1em;color:var(--muted)}
+.hero-phone a{color:var(--gold2)}
 
-/* ===== SECTION ===== */
-section{padding:clamp(4.5rem,10vw,8rem) 0}
-.sec-head{text-align:center;max-width:720px;margin:0 auto 3.5rem}
-.sec-head .eyebrow{display:block;margin-bottom:1.2rem}
-.sec-head h2{font-size:clamp(2.4rem,4.5vw,3.6rem)}
+/* SECTION */
+section{padding:110px 0}
+.section-head{max-width:720px;margin-bottom:56px}
+.section-head .eyebrow{display:block;margin-bottom:18px}
+.section-head h2{font-size:clamp(2rem,4vw,3.2rem)}
 
-/* ===== ABOUT ===== */
-#about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
-.about-visual{position:relative;padding:14px}
-.about-visual::before{content:'';position:absolute;inset:0;border:1px solid var(--gold);pointer-events:none}
-.about-visual img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
-.about-chip{
-  position:absolute;bottom:34px;left:34px;background:var(--cream);
-  padding:.6rem 1.2rem;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--gold-deep);border:1px solid var(--line);
-}
-.about-text .eyebrow{margin-bottom:1.1rem}
-.about-text h2{font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:1.6rem}
-.about-text p{color:var(--ink-soft);margin-bottom:1.3rem;max-width:52ch}
-.accent-line{
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;
-  color:var(--ink);border-left:2px solid var(--gold);padding-left:1.4rem;line-height:1.4;
-}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-visual{position:relative;overflow:hidden;border:1px solid var(--line);padding:14px;background:var(--ivory)}
+.about-visual .imgwrap{overflow:hidden}
+.about-visual img{transition:transform 1.4s ease;width:100%;height:100%;object-fit:cover}
+.about-visual:hover img{transform:scale(1.06)}
+.about-body p{color:var(--muted);margin-bottom:20px;font-size:1.05rem}
+.about-accent{border-left:2px solid var(--gold2);padding-left:22px;color:var(--ink);font-style:italic;font-family:'Cormorant Garamond';font-size:1.4rem;line-height:1.4}
 
-/* ===== TREATMENTS ===== */
-#treatments{background:var(--cream)}
-.treat-group{margin-bottom:3.2rem}
-.group-label{display:flex;align-items:center;gap:1.4rem;margin-bottom:1.8rem}
-.group-label h3{font-size:clamp(1.6rem,3vw,2.2rem);white-space:nowrap;font-weight:500}
-.group-label .hair{flex:1}
-.treat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;background:transparent}
-.treat-card{
-  background:var(--white);padding:1.6rem 1.5rem;cursor:pointer;
-  transition:.4s;position:relative;min-height:130px;display:flex;flex-direction:column;justify-content:space-between;
-  border:1px solid var(--line);
-}
-.treat-card:hover{background:var(--cream2)}
-.treat-card h4{font-size:1.35rem;font-weight:500;margin-bottom:.5rem}
-.treat-card .tease{font-size:.83rem;color:var(--ink-soft);line-height:1.5}
-.treat-card .more{
-  margin-top:1rem;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);
-}
+/* TREATMENTS */
+.treat-group{margin-bottom:64px}
+.treat-group h3{font-size:1.9rem;margin-bottom:6px}
+.treat-group .glabel{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+.treat-group .glabel::after{content:"";flex:1;height:1px;background:var(--line)}
+.treat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.tcard{background:var(--ivory);border:1px solid var(--line);padding:26px 24px;cursor:pointer;transition:transform .4s ease,box-shadow .4s ease,background .4s ease;position:relative}
+.tcard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(44,38,33,.1);background:#fff}
+.tcard h4{font-size:1.35rem;margin-bottom:8px}
+.tcard p{font-size:.86rem;color:var(--muted);line-height:1.55}
+.tcard .more{margin-top:16px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)}
+.tcard .more span{transition:margin-left .3s}
+.tcard:hover .more span{margin-left:6px}
 
-/* ===== CONTACT ===== */
-#contact{background:var(--white)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:stretch}
-.contact-info .eyebrow{margin-bottom:1.1rem}
-.contact-info h2{font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:1.8rem}
-.info-row{margin-bottom:1.5rem}
-.info-row .lbl{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:.3rem}
-.info-row .val{font-size:1.05rem;color:var(--ink)}
-.info-row a{color:var(--ink)}
-.info-row a:hover{color:var(--gold-deep)}
-.contact-map iframe{width:100%;height:100%;min-height:420px;border:1px solid var(--line);filter:sepia(.1)}
-.contact-cta{margin-top:2rem}
+/* CTA */
+.cta{background:var(--cream2);text-align:center}
+.cta h2{font-size:clamp(2rem,4.5vw,3.4rem);margin-bottom:18px}
+.cta p{color:var(--muted);max-width:560px;margin:0 auto 32px}
 
-/* ===== FOOTER ===== */
-footer{background:var(--cream2);padding:4rem 0 2rem;border-top:1px solid var(--line)}
-.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
-.foot-logo img{height:64px;margin-bottom:1.1rem}
-.foot-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--ink-soft);max-width:32ch}
-.foot-col h5{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:1.2rem;font-family:'Jost',sans-serif;font-weight:400}
-.foot-col a,.foot-col p{display:block;font-size:.86rem;color:var(--ink-soft);margin-bottom:.6rem;cursor:pointer}
-.foot-col a:hover{color:var(--gold-deep)}
-.foot-bottom{text-align:center;font-size:.74rem;letter-spacing:.16em;color:var(--ink-soft);padding-top:2rem;border-top:1px solid var(--line);text-transform:uppercase}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
+.contact-info h3{font-size:2rem;margin-bottom:24px}
+.contact-info .row{margin-bottom:22px}
+.contact-info .lbl{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:5px}
+.contact-info .val{font-size:1.05rem;color:var(--ink)}
+.contact-info .val a{color:var(--ink)}
+.contact-info .val a:hover{color:var(--gold2)}
+.map-wrap{overflow:hidden;border:1px solid var(--line);min-height:340px}
+.map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.2)}
 
-/* ===== MODALS ===== */
-.overlay{
-  position:fixed;inset:0;z-index:100;background:rgba(44,38,33,.55);backdrop-filter:blur(4px);
-  display:none;align-items:center;justify-content:center;padding:1.5rem;
-}
-.overlay.open{display:flex;animation:fade .3s ease}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-.modal{
-  background:var(--cream);max-width:560px;width:100%;max-height:88vh;overflow-y:auto;
-  padding:clamp(2rem,5vw,3.4rem);position:relative;border:1px solid var(--gold);
-  animation:rise .45s cubic-bezier(.2,.8,.2,1);
-}
-@keyframes rise{from{transform:translateY(24px);opacity:0}to{transform:translateY(0);opacity:1}}
-.modal .close{
-  position:absolute;top:1.1rem;right:1.3rem;background:none;border:none;font-size:1.8rem;
-  color:var(--ink-soft);cursor:pointer;line-height:1;font-family:'Cormorant Garamond',serif;
-}
-.modal .close:hover{color:var(--gold-deep)}
-.modal .eyebrow{margin-bottom:.9rem;display:block}
-.modal h3{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.2rem}
-.modal p.desc{color:var(--ink-soft);font-size:1rem;margin-bottom:1.8rem}
-.modal .modal-cta{margin-top:.5rem}
+/* FOOTER */
+footer{background:var(--ink);color:#e9e0d3;padding:70px 0 34px}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px}
+.foot-logo img{height:52px}
+.foot-logo .logo-text{color:#f3ece0}
+.foot-tag{font-family:'Cormorant Garamond';font-size:1.3rem;margin-top:12px;color:#cdbfa9;max-width:280px}
+.foot-links{display:flex;flex-direction:column;gap:12px}
+.foot-links a,.foot-links button{color:#cdbfa9;background:none;border:none;text-align:left;cursor:pointer;font-family:'Jost';font-weight:300;font-size:.92rem;letter-spacing:.06em;transition:color .3s;padding:0}
+.foot-links a:hover,.foot-links button:hover{color:var(--gold)}
+.foot-links .h{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;font-size:.78rem;letter-spacing:.08em;color:#9c9184;text-align:center}
 
-/* form */
-.field{margin-bottom:1.1rem}
-.field label{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:.4rem}
-.field input,.field select,.field textarea{
-  width:100%;padding:.8rem .9rem;background:var(--white);border:1px solid var(--line);
-  font-family:'Jost',sans-serif;font-weight:300;font-size:.95rem;color:var(--ink);border-radius:1px;
-}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
-.field textarea{resize:vertical;min-height:90px}
-.form-success{display:none;text-align:center;padding:1rem 0}
+/* MODALS */
+.overlay{position:fixed;inset:0;background:rgba(30,26,22,.62);backdrop-filter:blur(4px);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.overlay.open{display:flex}
+.modal{background:var(--ivory);max-width:620px;width:100%;border:1px solid var(--line);padding:44px 42px;position:relative;animation:pop .5s ease;margin:auto}
+@keyframes pop{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.modal .close{position:absolute;top:18px;right:20px;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--muted);line-height:1;transition:color .3s}
+.modal .close:hover{color:var(--gold2)}
+.modal .eyebrow{margin-bottom:12px;display:block}
+.modal h3{font-size:2.1rem;margin-bottom:16px}
+.modal p{color:var(--muted);margin-bottom:18px;font-size:1rem}
+.modal h4{font-family:'Jost';font-weight:500;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:var(--gold2);margin:22px 0 10px}
+.modal ul{list-style:none;margin-bottom:8px}
+.modal ul li{position:relative;padding-left:22px;margin-bottom:8px;color:var(--ink);font-size:.95rem}
+.modal ul li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--gold2)}
+.modal .modal-book{margin-top:26px}
+
+/* FORM */
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:#fff;font-family:'Jost';font-weight:300;font-size:.95rem;color:var(--ink);transition:border-color .3s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold2)}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-success{display:none;text-align:center;padding:30px 0}
 .form-success.show{display:block}
-.form-success p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--ink)}
+.form-success p{font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--ink)}
 
-/* reveal */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
-.no-js .reveal{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
 
-@media(max-width:900px){
+@media (max-width:880px){
   .hero{grid-template-columns:1fr}
-  .hero-img{min-height:46vh}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .foot-top{grid-template-columns:1fr;gap:2rem}
-  .nav-links{
-    position:fixed;top:0;right:0;height:100vh;width:min(80vw,320px);
-    background:var(--cream);flex-direction:column;justify-content:center;gap:2rem;
-    transform:translateX(100%);transition:.45s;box-shadow:-20px 0 60px rgba(44,38,33,.12);padding:2rem;
-  }
-  .nav-links.open{transform:translateX(0)}
-  .hamburger{display:flex;z-index:60}
-  .hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-  .hamburger.active span:nth-child(2){opacity:0}
-  .hamburger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .hero-img{min-height:38vh;order:-1}
+  .hero-text{padding:40px 30px 60px}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .navlinks{position:fixed;top:0;right:-100%;height:100vh;width:78%;max-width:320px;background:var(--cream);flex-direction:column;justify-content:center;gap:30px;padding:40px;transition:right .4s ease;box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+  .navlinks.open{right:0}
+  .hamburger{display:flex;z-index:110}
+  nav{padding:16px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none;transition:none}
 }
 </style>
 </head>
-<body class="no-js">
-<script>document.body.classList.remove('no-js')</script>
+<body>
 
-<!-- HEADER -->
-<header id="hdr">
-  <div class="container">
-    <nav>
-      <a href="#top" class="logo"><img src="img/pure-glow-logo.png" alt="Pure Glow Medical Aesthetics"></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#treatments">Treatments</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="ig" href="https://www.instagram.com/pure_glow_abbotsford/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><button class="btn btn-solid" onclick="openBooking()">Book Now</button></li>
-      </ul>
-      <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-    </nav>
+<!-- NAV -->
+<nav id="nav">
+  <a class="logo" href="#top"><img src="img/pure-glow-logo.png" alt="Pure Glow Medical Aesthetics" onerror="this.outerHTML='&lt;span class=&quot;logo-text&quot;&gt;Pure Glow&lt;/span&gt;'"></a>
+  <div class="navlinks" id="navlinks">
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#treatments">Treatments</a>
+    <a class="link" href="#contact">Contact</a>
+    <a class="link" href="https://www.instagram.com/pure_glow_abbotsford/" target="_blank" rel="noopener">Instagram</a>
+    <button class="btn solid" onclick="openBooking()">Book Now</button>
   </div>
-</header>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
 
 <!-- HERO -->
-<div id="top"></div>
-<section class="hero" style="padding-top:0">
-  <div class="hero-img" role="img" aria-label="Pure Glow Medical Aesthetics"></div>
+<header class="hero" id="top">
   <div class="hero-text">
-    <span class="eyebrow reveal">Physician-Led Medical Aesthetics · Abbotsford, BC</span>
-    <h1 class="reveal">Your natural glow, <em>refined.</em></h1>
-    <p class="sub reveal">Physician-led aesthetic care with honest assessments, advanced medical lasers, and results that always look like you.</p>
-    <span class="pricing-line reveal">Botox from $9/unit · Book a complimentary consultation</span>
-    <div class="hero-btns reveal">
-      <button class="btn btn-solid" onclick="openBooking()">Book a Consultation</button>
+    <span class="eyebrow">Physician-Led Medical Aesthetics · Abbotsford, BC</span>
+    <h1>Your natural glow, refined.</h1>
+    <p class="sub">Physician-led aesthetic care with honest assessments, advanced medical lasers, and results that always look like you.</p>
+    <div class="hero-line">Botox from $9/unit · Book a complimentary consultation</div>
+    <div class="hero-btns">
+      <button class="btn solid" onclick="openBooking()">Book a Consultation</button>
       <a class="btn" href="#treatments">Explore Treatments</a>
     </div>
-    <p class="hero-phone reveal">Call us · <a href="tel:7789914569">778-991-4569</a></p>
+    <div class="hero-phone">Call us · <a href="tel:7789914569">778-991-4569</a></div>
   </div>
-</section>
+  <div class="hero-img"></div>
+</header>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="container">
+  <div class="wrap">
     <div class="about-grid">
       <div class="about-visual reveal">
-        <img src="img/pure-glow-aesthetics-about.jpg" alt="Inside Pure Glow Medical Aesthetics">
-        <span class="about-chip">Abbotsford, BC</span>
+        <div class="imgwrap">
+          <img src="img/pure-glow-aesthetics-about.jpg" alt="Inside Pure Glow Medical Aesthetics">
+        </div>
       </div>
-      <div class="about-text reveal">
-        <span class="eyebrow">Our Clinic</span>
-        <h2>Led by physicians. Guided by honesty.</h2>
+      <div class="about-body reveal d1">
+        <span class="eyebrow" style="display:block;margin-bottom:16px">Our Clinic</span>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:24px">Led by physicians. Guided by honesty.</h2>
         <p>At Pure Glow Medical Aesthetics, we are dedicated to helping our clients achieve their aesthetic goals with natural-looking results. Led by physicians, our clinic prioritizes transparency and honest assessments, ensuring that every treatment plan is tailored to each individual's needs.</p>
         <p>Our top-of-the-line medical lasers and advanced treatment techniques utilize clinically proven methods to attain and maintain beautiful skin for life.</p>
-        <p class="accent-line">We believe in enhancing your natural beauty and boosting your confidence — proudly serving Abbotsford, Mission, Chilliwack, Langley and the surrounding communities.</p>
+        <div class="about-accent">We believe in enhancing your natural beauty and boosting your confidence — proudly serving Abbotsford, Mission, Chilliwack, Langley and the surrounding communities.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TREATMENTS -->
-<section id="treatments">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Treatments</span>
-      <h2>Considered, physician-led care</h2>
+<section id="treatments" style="background:var(--cream2)">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Treatments</h2>
+      <p style="color:var(--muted);margin-top:14px">Every treatment begins with a complimentary, honest consultation. Select any service to learn more.</p>
     </div>
-    <div id="treatContainer"></div>
+    <div id="treatments-container"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="display:block;margin-bottom:18px">Ready When You Are</span>
+    <h2>Begin with a complimentary consultation.</h2>
+    <p>Let us listen to your goals and craft a treatment plan tailored to you — with results that always look like you.</p>
+    <button class="btn solid" onclick="openBooking()">Book a Consultation</button>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="container">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Contact & Location</h2>
+    </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <span class="eyebrow">Visit Us</span>
-        <h2>Contact &amp; Location</h2>
-        <div class="info-row">
-          <div class="lbl">Address</div>
-          <div class="val">34077 Gladys Ave #500<br>Abbotsford, BC V2S 2E8</div>
-        </div>
-        <div class="info-row">
-          <div class="lbl">Phone</div>
-          <div class="val"><a href="tel:7789914569">778-991-4569 (GLOW)</a></div>
-        </div>
-        <div class="info-row">
-          <div class="lbl">Email</div>
-          <div class="val"><a href="mailto:PureGlowAesthetics.Abby@gmail.com">PureGlowAesthetics.Abby@gmail.com</a></div>
-        </div>
-        <div class="info-row">
-          <div class="lbl">Instagram</div>
-          <div class="val"><a href="https://www.instagram.com/pure_glow_abbotsford/" target="_blank" rel="noopener">@pure_glow_abbotsford</a></div>
-        </div>
-        <div class="contact-cta">
-          <button class="btn btn-solid" onclick="openBooking()">Book a Consultation</button>
-        </div>
+        <div class="row"><span class="lbl">Address</span><span class="val">34077 Gladys Ave #500,<br>Abbotsford, BC V2S 2E8</span></div>
+        <div class="row"><span class="lbl">Phone</span><span class="val"><a href="tel:7789914569">778-991-4569</a> (GLOW)</span></div>
+        <div class="row"><span class="lbl">Email</span><span class="val"><a href="mailto:PureGlowAesthetics.Abby@gmail.com">PureGlowAesthetics.Abby@gmail.com</a></span></div>
+        <div class="row"><span class="lbl">Instagram</span><span class="val"><a href="https://www.instagram.com/pure_glow_abbotsford/" target="_blank" rel="noopener">@pure_glow_abbotsford</a></span></div>
+        <button class="btn solid" style="margin-top:10px" onclick="openBooking()">Book Now</button>
       </div>
-      <div class="contact-map reveal">
-        <iframe src="https://www.google.com/maps?q=34077%20Gladys%20Ave%20%23500%2C%20Abbotsford%2C%20BC%20V2S%202E8&output=embed" loading="lazy" title="Map to Pure Glow Medical Aesthetics"></iframe>
+      <div class="map-wrap reveal d1">
+        <iframe src="https://www.google.com/maps?q=34077%20Gladys%20Ave%20%23500%2C%20Abbotsford%2C%20BC%20V2S%202E8&output=embed" loading="lazy" title="Map"></iframe>
       </div>
     </div>
   </div>
@@ -320,160 +257,210 @@ footer{background:var(--cream2);padding:4rem 0 2rem;border-top:1px solid var(--l
 
 <!-- FOOTER -->
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="foot-top">
       <div class="foot-logo">
-        <img src="img/pure-glow-logo.png" alt="Pure Glow Medical Aesthetics">
-        <p class="foot-tag">Enhancing your natural beauty — with honesty, and results that always look like you.</p>
+        <img src="img/pure-glow-logo.png" alt="Pure Glow Medical Aesthetics" onerror="this.outerHTML='&lt;span class=&quot;logo-text&quot;&gt;Pure Glow&lt;/span&gt;'">
+        <p class="foot-tag">Physician-led aesthetic care in Abbotsford, BC.</p>
       </div>
-      <div class="foot-col">
-        <h5>Explore</h5>
+      <div class="foot-links">
+        <span class="h">Explore</span>
         <a href="#about">About</a>
         <a href="#treatments">Treatments</a>
         <a href="#contact">Contact</a>
-        <a onclick="openBooking()">Book Now</a>
+        <button onclick="openBooking()">Book Now</button>
+      </div>
+      <div class="foot-links">
+        <span class="h">Contact</span>
+        <a href="tel:7789914569">778-991-4569</a>
+        <a href="mailto:PureGlowAesthetics.Abby@gmail.com">Email Us</a>
         <a href="https://www.instagram.com/pure_glow_abbotsford/" target="_blank" rel="noopener">Instagram</a>
       </div>
-      <div class="foot-col">
-        <h5>Contact</h5>
-        <p>34077 Gladys Ave #500<br>Abbotsford, BC V2S 2E8</p>
-        <a href="tel:7789914569">778-991-4569</a>
-        <a href="mailto:PureGlowAesthetics.Abby@gmail.com">PureGlowAesthetics.Abby@gmail.com</a>
-      </div>
     </div>
-    <div class="foot-bottom">© 2026 Pure Glow Medical Aesthetics · Abbotsford, BC</div>
+    <div class="foot-bottom">© 2026 Pure Glow Medical Aesthetics. All rights reserved.</div>
   </div>
 </footer>
 
 <!-- TREATMENT MODAL -->
 <div class="overlay" id="treatModal">
   <div class="modal">
-    <button class="close" onclick="closeModal('treatModal')">&times;</button>
-    <span class="eyebrow" id="tmGroup"></span>
+    <button class="close" onclick="closeTreat()">&times;</button>
+    <span class="eyebrow" id="tmCat"></span>
     <h3 id="tmTitle"></h3>
-    <p class="desc" id="tmDesc"></p>
-    <button class="btn btn-solid modal-cta" onclick="closeModal('treatModal');openBooking(document.getElementById('tmTitle').textContent)">Book This Treatment</button>
+    <div id="tmBody"></div>
+    <button class="btn solid modal-book" onclick="closeTreat();openBooking(document.getElementById('tmTitle').textContent)">Book This Treatment</button>
   </div>
 </div>
 
 <!-- BOOKING MODAL -->
 <div class="overlay" id="bookModal">
   <div class="modal">
-    <button class="close" onclick="closeModal('bookModal')">&times;</button>
-    <span class="eyebrow">Booking Enquiry</span>
-    <h3>Book your appointment</h3>
-    <p class="desc">Complete the form below and our team will confirm your appointment. Consultations are complimentary.</p>
-    <form id="bookForm">
-      <div class="field"><label>Name</label><input type="text" required></div>
-      <div class="field"><label>Email</label><input type="email" required></div>
-      <div class="field"><label>Phone</label><input type="tel" required></div>
-      <div class="field"><label>Treatment of Interest</label>
-        <select id="treatSelect"><option value="">Select a treatment…</option></select>
-      </div>
-      <div class="field"><label>Message</label><textarea placeholder="Tell us about your goals…"></textarea></div>
-      <button type="submit" class="btn btn-solid" style="width:100%">Submit Enquiry</button>
+    <button class="close" onclick="closeBooking()">&times;</button>
+    <span class="eyebrow">Enquiry & Booking</span>
+    <h3>Book Your Appointment</h3>
+    <form id="bookForm" onsubmit="return submitBooking(event)">
+      <div class="form-group"><label>Name</label><input type="text" required name="name"></div>
+      <div class="form-group"><label>Email</label><input type="email" required name="email"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" required name="phone"></div>
+      <div class="form-group"><label>Treatment of Interest</label><select id="treatSelect" name="treatment"></select></div>
+      <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell us about your goals..."></textarea></div>
+      <button class="btn solid" type="submit" style="width:100%">Submit Enquiry</button>
     </form>
-    <div class="form-success" id="bookSuccess">
-      <p>Thank you — we will be in touch shortly to confirm your appointment.</p>
-    </div>
+    <div class="form-success" id="bookSuccess"><p>Thank you — we will be in touch shortly to confirm your appointment.</p></div>
   </div>
 </div>
 
 <script>
-/* ===== TREATMENT DATA ===== */
-const groups=[
-  {name:"Injectables",items:[
-    {t:"Neuromodulators / Botox®",d:"Approved by Health Canada to temporarily relax specific muscles by blocking nerve impulses. As the treated muscles relax, the dynamic wrinkles and lines created by their contraction soften for a smoother, refreshed look. From $9 per unit."},
-    {t:"Dermal Fillers",d:"We use dermal fillers made of a concentrated gel form of hyaluronic acid — an ingredient your skin naturally produces. When injected into targeted areas of the face, fillers restore volume, smooth lines and refine contours for a naturally rejuvenated result."}
-  ]},
-  {name:"Eyelid Surgery & Eye Treatments",items:[
-    {t:"Upper Lid Blepharoplasty",d:"Expert upper lid blepharoplasty performed in office to remove excess skin and fat from the upper eyelids, for a more youthful, refreshed and alert appearance. A personalized approach ensures results tailored to your specific needs."},
-    {t:"Lower Lid Blepharoplasty",d:"A specialized procedure targeting excess skin, fat and puffiness under the eyes, for a smoother, more youthful under-eye area and improved overall facial harmony, with natural-looking results."},
-    {t:"Dry Eye Treatment",d:"Relief for dry eye syndrome using Intense Pulsed Light (IPL) to address discomfort, irritation and the visual disturbances caused by insufficient or poor-quality tears."},
-    {t:"Eyelid Skin Resurfacing",d:"A cosmetic procedure that improves the skin around the eyes by removing outer layers of damaged skin, reducing the visibility of fine lines, wrinkles and age spots."},
-    {t:"Dark Circles",d:"Personalized treatment for dark under-eye circles caused by thinning skin, aging, genetics and lifestyle — restoring a brighter, more rested appearance."}
-  ]},
-  {name:"Medical Laser",items:[
-    {t:"Targeted Laser",d:"A cutting-edge solution for skin rejuvenation that delivers controlled pulses of light energy to precisely address a range of cosmetic concerns, breaking down unwanted pigment and stimulating renewal."},
-    {t:"Acne",d:"Medical laser therapy to calm active acne and improve the clarity and texture of the skin."},
-    {t:"Melasma & Pigmentation",d:"Advanced laser treatment to lighten stubborn pigmentation, melasma and uneven tone for a more even, luminous complexion."},
-    {t:"Rosacea & Vascular Lesions",d:"Gentle light-based treatment to reduce facial redness, flushing and visible vascular lesions."},
-    {t:"Nail Fungus",d:"Nd:YAG laser treatment offers a quick, effective solution for fungal nail infections — heating the affected nail and surrounding tissue without the long commitment of topical or oral medications."},
-    {t:"Stretch Marks",d:"A fractional non-ablative laser that stimulates new collagen formation, producing healthier, rejuvenated skin with minimal downtime, less redness and less swelling."},
-    {t:"Fractional Skin Resurfacing",d:"A versatile, fully customized treatment using a non-ablative Er:YAG laser to gently resurface the skin according to your concerns, desired downtime and outcomes."},
-    {t:"Tattoo Removal",d:"Laser tattoo removal to gradually and safely break down unwanted ink."},
-    {t:"Laser Hair Removal",d:"Precise laser hair removal for smooth, long-lasting results across a range of areas."},
-    {t:"Microneedling",d:"Controlled micro-injuries that trigger the skin's natural collagen response, refining texture, tone and the appearance of scars and fine lines."}
-  ]},
-  {name:"Laser Facials",items:[
-    {t:"IPL Photofacial",d:"An Intense Pulsed Light facial that targets sun damage, redness and uneven tone to reveal brighter, clearer, more radiant skin."},
-    {t:"Laser Toning",d:"A gentle laser facial that refines tone and texture and restores a healthy, luminous glow with virtually no downtime."}
-  ]}
-];
+const treatments = {
+  "Injectables":[
+    {t:"Neuromodulators / Botox®",o:"Approved by Health Canada to temporarily relax specific muscles by blocking nerve impulses. As the treated muscles relax, the dynamic wrinkles and lines created by their contraction soften for a smoother, refreshed look. From $9 per unit.",h:"We begin with a personalized, complimentary assessment so you can make the best decision for you. Neuromodulator is precisely placed into targeted muscles; over the following days those muscles gently relax and expression lines soften. Results are subtle and natural, never frozen.",b:["From $9 per unit","Complimentary, honest consultation","Softens dynamic wrinkles and lines","Quick, natural-looking refresh"]},
+    {t:"Dermal Fillers",o:"We use dermal fillers made of a concentrated gel form of hyaluronic acid — an ingredient your skin naturally produces. When injected into targeted areas of the face, fillers restore volume, smooth lines and refine contours for a naturally rejuvenated result.",h:"During your consultation we create a customized treatment plan for your desired look. Appointments take approximately 30–45 minutes. Filler is placed to give shape and structure to areas of collagen or fat depletion, plumping lips and cheeks or smoothing folds. Some swelling or bruising may occur, so we suggest treating 1–2 weeks before big events.",b:["Restores volume and refines contours","Naturally sculpted lips and cheeks","Can be combined with neuromodulators","Little to no downtime for most clients"]}
+  ],
+  "Eyelid Surgery & Eye Treatments":[
+    {t:"Upper Lid Blepharoplasty",o:"Expert upper lid blepharoplasty performed in office to remove excess skin and fat from the upper eyelids, for a more youthful, refreshed and alert appearance. A personalized approach ensures results tailored to your specific needs.",h:"Dermatochalasis — excess skin on the upper lids — can create a tired look and even obstruct vision. After a thorough consultation to assess your eyelid anatomy and goals, our experienced surgeon carefully removes excess skin and, if needed, addresses protruding fat pads, tailored to your unique anatomy for natural-looking results.",b:["Corrects drooping, heavy upper lids","May improve obstructed vision","Performed comfortably in office","Personalized, natural-looking outcome"]},
+    {t:"Lower Lid Blepharoplasty",o:"A specialized procedure targeting excess skin, fat and puffiness under the eyes, for a smoother, more youthful under-eye area and improved overall facial harmony, with natural-looking results.",h:"Lower lid aging can appear as wrinkles, dark circles, puffiness and under-eye bags — often with a genetic component such as thinner skin or reduced fat volume. During the procedure our surgeon addresses these concerns, including repositioning or removing excess or displaced fat pockets to create a smoother contour.",b:["Reduces under-eye bags and puffiness","Smooths and rejuvenates the lower lids","Improves overall facial harmony","Tailored to your unique anatomy"]},
+    {t:"Dry Eye Treatment",o:"Relief for dry eye syndrome using Intense Pulsed Light (IPL) to address discomfort, irritation and the visual disturbances caused by insufficient or poor-quality tears.",h:"Dry eye occurs when your eyes don't produce enough tears or the right quality of tears. IPL targets the underlying inflammation and dysfunction of the meibomian glands. This non-invasive treatment uses gentle pulses of light to reduce abnormal blood vessels and improve gland function for better tear quality and lasting relief.",b:["Non-invasive with no downtime","Addresses the root causes of dry eye","Improves tear quality and comfort","Can be combined with other treatments"]},
+    {t:"Eyelid Skin Resurfacing",o:"A cosmetic procedure that improves the skin around the eyes by removing outer layers of damaged skin, reducing the visibility of fine lines, wrinkles and age spots.",h:"Gentle, controlled resurfacing removes the outermost layers of damaged skin around the delicate eye area, encouraging fresh, healthier skin to emerge. Your treatment is customized to your concerns and desired downtime.",b:["Softens fine lines and wrinkles","Reduces age spots around the eyes","Brighter, smoother eye area","Customized to your skin"]},
+    {t:"Dark Circles",o:"Personalized treatment for dark under-eye circles caused by thinning skin, aging, genetics and lifestyle — restoring a brighter, more rested appearance.",h:"Dark circles have many causes, from thinning skin and visible vessels to genetics and lifestyle. After assessing the cause of yours, we tailor a treatment approach to brighten and refresh the under-eye area for a more rested look.",b:["Targets the specific cause of your circles","Brighter, more rested appearance","Personalized treatment plan","Natural-looking results"]}
+  ],
+  "Medical Laser":[
+    {t:"Targeted Laser",o:"A cutting-edge solution for skin rejuvenation that delivers controlled pulses of light energy to precisely address a range of cosmetic concerns, breaking down unwanted pigment and stimulating renewal.",h:"Precise, controlled pulses of light energy are directed at specific concerns, breaking down unwanted pigment while stimulating the skin's natural renewal for clearer, healthier-looking skin.",b:["Precise, targeted treatment","Breaks down unwanted pigment","Stimulates skin renewal","Customizable to your concerns"]},
+    {t:"Acne",o:"Medical laser therapy to calm active acne and improve the clarity and texture of the skin.",h:"Medical laser energy helps calm active breakouts and refine the skin, improving clarity and texture over a course of treatments tailored to your skin.",b:["Calms active acne","Improves skin clarity and texture","Non-invasive","Tailored treatment course"]},
+    {t:"Melasma & Pigmentation",o:"Advanced laser treatment to lighten stubborn pigmentation, melasma and uneven tone for a more even, luminous complexion.",h:"Advanced laser technology gently targets stubborn pigment and melasma, lightening discolouration and evening out the complexion over a personalized series of sessions.",b:["Lightens stubborn pigmentation","Improves melasma and uneven tone","More luminous complexion","Personalized approach"]},
+    {t:"Rosacea & Vascular Lesions",o:"Gentle light-based treatment to reduce facial redness, flushing and visible vascular lesions.",h:"Light-based energy targets the vessels responsible for redness, flushing and visible vascular lesions, gently reducing their appearance for calmer, more even skin.",b:["Reduces facial redness and flushing","Targets visible vascular lesions","Gentle, non-invasive","Calmer, more even complexion"]},
+    {t:"Nail Fungus",o:"Nd:YAG laser treatment offers a quick, effective solution for fungal nail infections — heating the affected nail and surrounding tissue without the long commitment of topical or oral medications.",h:"The Nd:YAG laser heats the affected nail and surrounding tissue to target the fungus directly, offering a quick, effective alternative to the long commitment of topical or oral medications.",b:["Quick and effective","No topical or oral medication commitment","Targets fungus directly","Minimal disruption"]},
+    {t:"Stretch Marks",o:"A fractional non-ablative laser that stimulates new collagen formation, producing healthier, rejuvenated skin with minimal downtime, less redness and less swelling.",h:"A fractional non-ablative laser gently stimulates new collagen formation in the treated skin, improving the texture and appearance of stretch marks with minimal downtime.",b:["Stimulates new collagen","Improves stretch mark appearance","Minimal downtime","Less redness and swelling"]},
+    {t:"Fractional Skin Resurfacing",o:"A versatile, fully customized treatment using a non-ablative Er:YAG laser to gently resurface the skin according to your concerns, desired downtime and outcomes.",h:"Using a non-ablative Er:YAG laser, we gently resurface the skin in a fully customized way — adjusting intensity to your concerns, desired downtime and outcomes for renewed texture and tone.",b:["Fully customizable treatment","Refines texture and tone","Adjustable downtime","Non-ablative technology"]},
+    {t:"Tattoo Removal",o:"Laser tattoo removal to gradually and safely break down unwanted ink.",h:"Laser energy safely breaks down unwanted ink particles over a series of sessions, allowing your body to gradually clear them for progressively lighter results.",b:["Gradual, safe ink removal","Suitable for a range of tattoos","Performed over a session series","Progressive fading"]},
+    {t:"Laser Hair Removal",o:"Precise laser hair removal for smooth, long-lasting results across a range of areas.",h:"Laser energy targets the hair follicle to reduce regrowth over a series of treatments, leaving skin smooth with long-lasting results across a range of treatment areas.",b:["Smooth, long-lasting results","Precise follicle targeting","Suitable for many areas","Performed in a session series"]},
+    {t:"Microneedling",o:"Controlled micro-injuries that trigger the skin's natural collagen response, refining texture, tone and the appearance of scars and fine lines.",h:"Fine controlled micro-channels trigger the skin's natural healing and collagen response, gradually refining texture and tone and improving the appearance of scars and fine lines.",b:["Boosts natural collagen","Refines texture and tone","Softens scars and fine lines","Minimal downtime"]}
+  ],
+  "Laser Facials":[
+    {t:"IPL Photofacial",o:"An Intense Pulsed Light facial that targets sun damage, redness and uneven tone to reveal brighter, clearer, more radiant skin.",h:"Intense Pulsed Light gently targets sun damage, redness and uneven tone across the treated area, revealing brighter, clearer and more radiant skin with little downtime.",b:["Targets sun damage and redness","Evens out skin tone","Brighter, more radiant skin","Little to no downtime"]},
+    {t:"Laser Toning",o:"A gentle laser facial that refines tone and texture and restores a healthy, luminous glow with virtually no downtime.",h:"A gentle laser facial that works to refine tone and texture while restoring a healthy, luminous glow — ideal as a regular treatment with virtually no downtime.",b:["Refines tone and texture","Restores luminous glow","Virtually no downtime","Great as a regular treatment"]}
+  ]
+};
 
-/* ===== BUILD TREATMENTS ===== */
-const container=document.getElementById('treatContainer');
-const select=document.getElementById('treatSelect');
-groups.forEach(g=>{
-  const grp=document.createElement('div');
-  grp.className='treat-group';
-  grp.innerHTML=`<div class="group-label"><h3>${g.name}</h3><div class="hair"></div></div>`;
-  const grid=document.createElement('div');grid.className='treat-grid';
-  g.items.forEach(it=>{
+/* Render treatments */
+const container = document.getElementById('treatments-container');
+const select = document.getElementById('treatSelect');
+let treatIndex = {};
+let gi=0;
+for(const group in treatments){
+  const gdiv=document.createElement('div');
+  gdiv.className='treat-group reveal';
+  gdiv.innerHTML='<div class="glabel"><h3>'+group+'</h3></div>';
+  const grid=document.createElement('div');
+  grid.className='treat-grid';
+  const og=document.createElement('optgroup');og.label=group;
+  treatments[group].forEach((item,idx)=>{
+    const key=group+'::'+idx;
+    treatIndex[key]=item;
     const card=document.createElement('div');
-    card.className='treat-card';
-    card.innerHTML=`<div><h4>${it.t}</h4><div class="tease">${it.d.slice(0,74)}…</div></div><div class="more">Learn More →</div>`;
-    card.onclick=()=>openTreat(g.name,it.t,it.d);
+    card.className='tcard';
+    card.innerHTML='<h4>'+item.t+'</h4><p>'+item.o.slice(0,110)+(item.o.length>110?'…':'')+'</p><div class="more">Learn More <span>→</span></div>';
+    card.onclick=()=>openTreat(group,item);
     grid.appendChild(card);
-    const opt=document.createElement('option');opt.value=it.t;opt.textContent=it.t;select.appendChild(opt);
+    const opt=document.createElement('option');opt.value=item.t;opt.textContent=item.t;og.appendChild(opt);
   });
-  grp.appendChild(grid);container.appendChild(grp);
-});
+  gdiv.appendChild(grid);
+  container.appendChild(gdiv);
+  select.appendChild(og);
+}
 
-/* ===== MODAL LOGIC ===== */
-function openTreat(g,t,d){
-  document.getElementById('tmGroup').textContent=g;
-  document.getElementById('tmTitle').textContent=t;
-  document.getElementById('tmDesc').textContent=d;
+function openTreat(cat,item){
+  document.getElementById('tmCat').textContent=cat;
+  document.getElementById('tmTitle').textContent=item.t;
+  let bl=item.b.map(b=>'<li>'+b+'</li>').join('');
+  document.getElementById('tmBody').innerHTML=
+    '<p>'+item.o+'</p><h4>What to Expect</h4><p>'+item.h+'</p><h4>Benefits</h4><ul>'+bl+'</ul>';
   openOverlay('treatModal');
 }
+function closeTreat(){closeOverlay('treatModal');}
+
 function openBooking(pre){
-  if(pre)select.value=pre;
+  if(pre){const s=document.getElementById('treatSelect');for(const o of s.options){if(o.value===pre){s.value=pre;break;}}}
   document.getElementById('bookForm').style.display='block';
   document.getElementById('bookSuccess').classList.remove('show');
   openOverlay('bookModal');
 }
-function openOverlay(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';closeMenu();}
-function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
-document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id)}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.overlay.open').forEach(o=>closeModal(o.id))});
-
-document.getElementById('bookForm').addEventListener('submit',e=>{
+function closeBooking(){closeOverlay('bookModal');}
+function submitBooking(e){
   e.preventDefault();
   document.getElementById('bookForm').style.display='none';
   document.getElementById('bookSuccess').classList.add('show');
-});
+  return false;
+}
 
-/* ===== NAV ===== */
-const hdr=document.getElementById('hdr');
-addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>30));
-const burger=document.getElementById('burger'),nl=document.getElementById('navLinks');
-burger.addEventListener('click',()=>{nl.classList.toggle('open');burger.classList.toggle('active')});
-function closeMenu(){nl.classList.remove('open');burger.classList.remove('active')}
-nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+function openOverlay(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeOverlay(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o){o.classList.remove('open');document.body.style.overflow='';}}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.overlay.open').forEach(o=>o.classList.remove('open'));document.body.style.overflow='';}});
 
-/* ===== REVEAL ===== */
-const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.08,rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.reveal').forEach(el=>{
-  // if already in view on load, reveal immediately
-  const r=el.getBoundingClientRect();
-  if(r.top < innerHeight*1.05) el.classList.add('in'); else io.observe(el);
-});
-// failsafe: nothing stays invisible
-setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
-  const r=el.getBoundingClientRect();
-  if(r.top < innerHeight) el.classList.add('in');
-}),1200);
+/* Nav scroll */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40);});
+/* Hamburger */
+const ham=document.getElementById('hamburger'),links=document.getElementById('navlinks');
+ham.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a,button').forEach(l=>l.addEventListener('click',()=>links.classList.remove('open')));
+
+/* Reveal */
+const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<!-- ===== POLISH LAYER (inject before </body>) — custom cursor + refined hover/motion ===== -->
+<style id="polish-layer">
+@media (hover:hover) and (pointer:fine){
+  /* custom cursor: a fast dot + a lagging ring, blend against any background */
+  * { cursor: none !important; }
+  #pl-dot,#pl-ring{position:fixed;top:0;left:0;z-index:2147483647;pointer-events:none;border-radius:50%;
+    mix-blend-mode:difference;will-change:transform;transform:translate3d(-50%,-50%,0);}
+  #pl-dot{width:7px;height:7px;background:#fff;transition:width .25s ease,height .25s ease,opacity .3s;}
+  #pl-ring{width:34px;height:34px;border:1px solid rgba(255,255,255,.85);
+    transition:width .3s cubic-bezier(.16,1,.3,1),height .3s cubic-bezier(.16,1,.3,1),opacity .3s,background .3s;}
+  #pl-ring.hot{width:56px;height:56px;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.95);}
+  #pl-dot.hot{width:0;height:0;opacity:0;}
+  #pl-ring.down{width:26px;height:26px;}
+}
+/* refined hover motion — additive, does not hide content */
+a,button,.btn{transition:color .35s ease,background-color .35s ease,border-color .35s ease,transform .35s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;}
+.btn:hover{transform:translateY(-2px);}
+/* card lift: target common card patterns from the recipe */
+[class*="card"],[class*="Card"],.member,.t-card,.svc-cat,.review,.testi-card,.blog-card,.rcard,.group .item,.tile{
+  transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .55s ease,border-color .45s ease !important;}
+[class*="card"]:hover,[class*="Card"]:hover,.member:hover,.t-card:hover,.svc-cat:hover,.review:hover,.testi-card:hover,.blog-card:hover,.rcard:hover,.tile:hover{
+  transform:translateY(-6px) !important;box-shadow:0 22px 50px rgba(20,18,15,.13) !important;}
+/* image zoom inside any overflow-clipped container */
+[class*="card"] img,[class*="Card"] img,.member img,.ph img,.about-mark img,.about-visual img,.about-block img,.rph img,.hero-img,figure img{
+  transition:transform .8s cubic-bezier(.16,1,.3,1) !important;}
+[class*="card"]:hover img,[class*="Card"]:hover img,.member:hover img,.ph:hover img,figure:hover img{transform:scale(1.05) !important;}
+/* animated underline on nav links */
+nav a:not(.btn):not(.logo)::after,.nav a:not(.btn):not(.logo)::after,.navlinks a::after{
+  content:"";position:absolute;left:0;bottom:-3px;width:0;height:1px;background:currentColor;opacity:.6;transition:width .4s cubic-bezier(.16,1,.3,1);}
+nav a:not(.btn):not(.logo),.nav a:not(.btn):not(.logo),.navlinks a{position:relative;}
+nav a:not(.btn):not(.logo):hover::after,.nav a:not(.btn):not(.logo):hover::after,.navlinks a:hover::after{width:100%;}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important;} #pl-dot,#pl-ring{display:none !important;} *{cursor:auto !important;}}
+</style>
+<script id="polish-script">
+(function(){
+  if(!window.matchMedia||!window.matchMedia("(hover:hover) and (pointer:fine)").matches) return;
+  if(window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+  var dot=document.createElement("div"),ring=document.createElement("div");
+  dot.id="pl-dot";ring.id="pl-ring";document.body.appendChild(dot);document.body.appendChild(ring);
+  var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+  addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.transform="translate3d("+(mx-3.5)+"px,"+(my-3.5)+"px,0)";},{passive:true});
+  (function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.transform="translate3d("+(rx-17)+"px,"+(ry-17)+"px,0)";requestAnimationFrame(loop);})();
+  var hot="a,button,.btn,input,textarea,select,[onclick],[role=button],label";
+  addEventListener("mouseover",function(e){ if(e.target.closest(hot)){ring.classList.add("hot");dot.classList.add("hot");}});
+  addEventListener("mouseout",function(e){ if(e.target.closest(hot)){ring.classList.remove("hot");dot.classList.remove("hot");}});
+  addEventListener("mousedown",function(){ring.classList.add("down");});
+  addEventListener("mouseup",function(){ring.classList.remove("down");});
+  addEventListener("mouseleave",function(){dot.style.opacity=0;ring.style.opacity=0;});
+  addEventListener("mouseenter",function(){dot.style.opacity=1;ring.style.opacity=1;});
+})();
+</script>
+<!-- ===== END POLISH LAYER ===== -->
+
 </body>
 </html>
